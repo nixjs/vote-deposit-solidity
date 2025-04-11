@@ -5,7 +5,7 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-const { INFURA_PROJECT_ID, PRIVATE_KEY, ETHERSCAN_API_KEY } = process.env
+const { INFURA_PROJECT_ID, PRIVATE_KEY, ETHERSCAN_API_KEY, BSCSCAN_API_KEY } = process.env
 
 const config: HardhatUserConfig = {
     solidity: '0.8.28',
@@ -20,7 +20,12 @@ const config: HardhatUserConfig = {
         },
     },
     etherscan: {
-        apiKey: ETHERSCAN_API_KEY,
+        apiKey: BSCSCAN_API_KEY,
+        // apiKey: ETHERSCAN_API_KEY,
+    },
+
+    sourcify: {
+        enabled: false, // Tắt Sourcify để không hiện thông báo
     },
 }
 
