@@ -1,5 +1,7 @@
 import hre from 'hardhat'
 
+// https://testnet.bscscan.com/address/0xe1fae36f53cd00a3bcd9ff107b6b05d5ad11dbdf
+
 async function main() {
     console.log('Đang triển khai VOTE...')
 

@@ -3,6 +3,8 @@ import hre from 'hardhat'
 
 dotenv.config()
 
+// https://testnet.bscscan.com/address/0xa1a9db6b59a4d0e8d15e29eb0cd2c698d21da35c
+
 const USDT_ADDRESS = '0x337610d27c682E347C9cD60BD4b3b107C9d34dDd' // https://testnet.bscscan.com/token/0x337610d27c682E347C9cD60BD4b3b107C9d34dDd
 const VOTE_ADDRESS = '0x8c2b774aaa86099aa6c117a569900178c4d9e120' // https://testnet.bscscan.com/token/0x8c2b774aaa86099aa6c117a569900178c4d9e120
 const KYC_VERIFIER_BACKEND = '0x42Ca93Bf644dc646409637883bfcc58f24cB19e2' // Địa chỉ của backend (signer)
