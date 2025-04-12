@@ -1,5 +1,4 @@
 import hre from 'hardhat'
-import { getContract } from 'viem'
 
 async function main() {
     console.log('Đang triển khai VOTE...')
@@ -28,16 +27,6 @@ async function main() {
     }
 
     console.log('VOTE deployed to:', receipt.contractAddress, receipt.transactionHash)
-
-    // // Tạo instance contract để tương tác
-    // const VOTE = getContract({
-    //     abi,
-    //     address: receipt.contractAddress as `0x${string}`,
-    //     client: { wallet: walletClient, public: publicClient },
-    // })
-
-    // // Đọc thông tin từ contract (ví dụ: name)
-    // console.log('VOTE name:', VOTE.address)
 }
 
 main().catch((error) => {
