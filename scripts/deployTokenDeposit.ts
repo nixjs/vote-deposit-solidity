@@ -3,8 +3,8 @@ import hre from 'hardhat'
 
 dotenv.config()
 
-// https://testnet.bscscan.com/address/0x2ee17c196ea9aa67c16007213c4cddf3f1222490#code
-const USDT_ADDRESS = '0x337610d27c682E347C9cD60BD4b3b107C9d34dDd' // https://testnet.bscscan.com/token/0x337610d27c682E347C9cD60BD4b3b107C9d34dDd
+// https://testnet.bscscan.com/address/0xc2c1dfe44630411928cfafb4aaa0f33e4bb162b9#code
+const VOTE_ADDRESS = '0xc704A34Fa25Fa9Bd841a361F9879A107D6DaC63e' // https://testnet.bscscan.com/token/0xc704A34Fa25Fa9Bd841a361F9879A107D6DaC63e
 
 async function main() {
     const walletClients = await hre.viem.getWalletClients()
@@ -23,14 +23,14 @@ async function main() {
     const hash = await walletClient.deployContract({
         abi,
         bytecode,
-        args: [USDT_ADDRESS],
+        args: [VOTE_ADDRESS],
     })
 
     const receipt = await publicClient.waitForTransactionReceipt({ hash })
     if (receipt.contractAddress) {
         console.log(`TokenDeposit deployed at: ${receipt.contractAddress}`)
         console.log('Run the following command to verify:')
-        console.log(`npx hardhat verify --network bscTestnet ${receipt.contractAddress} ${USDT_ADDRESS}`)
+        console.log(`npx hardhat verify --network bscTestnet ${receipt.contractAddress} ${VOTE_ADDRESS}`)
     } else {
         console.error('Deployment failed: No contract address in receipt')
     }
