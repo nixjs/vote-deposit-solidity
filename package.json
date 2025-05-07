@@ -1,27 +1,24 @@
 {
-    "name": "hardhat-project",
-    "scripts": {
-        "compile": "npx hardhat compile",
-        "deploy-vote": "npx hardhat run scripts/deployVote.ts --network bscTestnet",
-        "deploy-token-deposit": "npx hardhat run scripts/deployTokenDeposit.ts --network bscTestnet",
-        "deploy-deposit": "npx hardhat run scripts/deployDeposit.ts --network bscTestnet",
-        "verify-deposit": "npx hardhat verify --network bscTestnet 0xe1fae36f53cd00a3bcd9ff107b6b05d5ad11dbdf 0x337610d27c682E347C9cD60BD4b3b107C9d34dDd 0x8c2b774aaa86099aa6c117a569900178c4d9e120",
-        "deploy-kyc-deposit": "npx hardhat run scripts/deployKCTVote.ts --network bscTestnet",
-        "verify-kyc-deposit": "npx hardhat verify --network bscTestnet 0xa1a9db6b59a4d0e8d15e29eb0cd2c698d21da35c 0x337610d27c682E347C9cD60BD4b3b107C9d34dDd 0x8c2b774aaa86099aa6c117a569900178c4d9e120 0x42Ca93Bf644dc646409637883bfcc58f24cB19e2",
-        "flatten-deposit": "npx hardhat flatten contracts/VotingDeposit.sol > flatten-contracts/VotingDeposit.sol",
-        "flatten-kyc-deposit": "npx hardhat flatten contracts/VotingKYCDeposit.sol > flatten-contracts/VotingKYCDeposit.sol"
-    },
-    "dependencies": {
-        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-        "dotenv": "^16.4.7",
-        "hardhat": "^2.22.19",
-        "viem": "^2.24.2"
-    },
-    "devDependencies": {
-        "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
-        "@openzeppelin/contracts": "^5.2.0",
-        "@types/node": "^22.13.14",
-        "ts-node": "^10.9.2",
-        "typescript": "^5.8.2"
-    }
+  "name": "hardhat-project",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy-vote": "npx hardhat run scripts/deployVote.ts --network bscTestnet",
+    "deploy-u": "npx hardhat run scripts/deployU.ts --network bscTestnet",
+    "deploy-token-deposit": "npx hardhat run scripts/deployTokenDeposit.ts --network bscTestnet",
+    "deploy-deposit": "npx hardhat run scripts/deployDeposit.ts --network bscTestnet",
+    "deploy-kyc-deposit": "npx hardhat run scripts/deployKCTVote.ts --network bscTestnet"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.19",
+    "viem": "^2.24.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@openzeppelin/contracts": "^5.2.0",
+    "@types/node": "^22.13.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
 }
