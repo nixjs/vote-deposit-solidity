@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract VOTE is ERC20 {
     constructor() ERC20("VOTE", "VOTE") {
-        _mint(msg.sender, 1_000_000_000 * 10**18);
+        _mint(msg.sender, 100_000_000_000_000 * 10**18);
     }
 
     function decimals() public pure override returns (uint8) {

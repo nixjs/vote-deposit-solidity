@@ -2,8 +2,8 @@
   "name": "hardhat-project",
   "scripts": {
     "compile": "npx hardhat compile",
-    "deploy-vote": "npx hardhat run scripts/deployVote.ts --network bscTestnet",
-    "deploy-u": "npx hardhat run scripts/deployU.ts --network bscTestnet",
+    "deploy-vote": "npx hardhat run scripts/deployVote.ts --network bsc",
+    "deploy-u": "npx hardhat run scripts/deployU.ts --network bsc",
     "deploy-token-deposit": "npx hardhat run scripts/deployTokenDeposit.ts --network bscTestnet",
     "deploy-deposit": "npx hardhat run scripts/deployDeposit.ts --network bscTestnet",
     "deploy-kyc-deposit": "npx hardhat run scripts/deployKCTVote.ts --network bscTestnet"

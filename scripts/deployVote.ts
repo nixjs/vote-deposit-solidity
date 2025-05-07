@@ -24,8 +24,12 @@ async function main() {
     })
 
     const receipt = await publicClient.waitForTransactionReceipt({ hash })
-    if (!receipt.contractAddress) {
-        throw new Error('Triển khai VOTE thất bại: Không nhận được địa chỉ contract')
+    if (receipt.contractAddress) {
+        console.log(`VotingDeposit deployed at: ${receipt.contractAddress}`)
+        console.log('Run the following command to verify:')
+        console.log(`npx hardhat verify --network bscTestnet ${receipt.contractAddress} --contract contracts/VOTE.sol:VOTE`)
+    } else {
+        console.error('Deployment failed: No contract address in receipt')
     }
 
     console.log('VOTE deployed to:', receipt.contractAddress, receipt.transactionHash)
